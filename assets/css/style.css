@@ -341,6 +341,10 @@ body {
   display: inline-block;
 }
 
+.header-area .menu ul li.active a {
+  color: #ff7720 !important;
+}
+
 .header-area .menu ul li a {
   margin-left: 20px;
   font-size: 18px;

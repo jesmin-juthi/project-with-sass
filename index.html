@@ -16,20 +16,20 @@
                     <a href="">sass project</a>
                 </div><!-- /.logo -->
                 <div class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                    <ul id="nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div><!-- /.menu -->
             </div><!-- /.header -->
         </div><!-- /.main -->
     </header><!-- /.header-area -->
 
-    <section class="banner-area bg pt-100 pb-100" style="background-image: url('assets/images/banner.jpg')">
+    <section class="banner-area bg pt-100 pb-100" style="background-image: url('assets/images/banner.jpg')" id="home">
         <div class="main">
             <div class="banner-content text-center">
                 <h2>Welcome to Sass!</h2>
@@ -40,7 +40,7 @@
         </div><!-- /.main -->
     </section><!-- /.banner-area -->
 
-    <section class="about-area pt-100 pb-100">
+    <section class="about-area pt-100 pb-100" id="about">
         <div class="main">
             <div class="section-title text-center">
                 <h4>about us</h4>
@@ -66,7 +66,7 @@
         </div><!-- /.main -->
     </section><!-- /.about-area -->
 
-    <section class="services-area pt-100 pb-100">
+    <section class="services-area pt-100 pb-100" id="services">
         <div class="main">
             <div class="section-title text-center">
                 <h4>our services</h4>
@@ -107,7 +107,7 @@
         </div><!-- /.main -->
     </section><!-- /.services-area -->
 
-    <section class="portfolio-area pt-100 pb-70">
+    <section class="portfolio-area pt-100 pb-70" id="portfolio">
         <div class="main">
             <div class="section-title text-center">
                 <h4>latest portfolio</h4>
@@ -144,7 +144,7 @@
         </div><!-- /.main -->
     </section><!-- /.cta-area -->
 
-    <section class="blog-area pb-100 pt-100">
+    <section class="blog-area pb-100 pt-100" id="blog">
         <div class="main">
             <div class="section-title text-center">
                 <h4>exclusive blog</h4>
@@ -179,7 +179,7 @@
         </div><!-- /.main -->
     </section><!-- /.blog-area -->
 
-    <section class="contact-area pt-100 pb-100">
+    <section class="contact-area pt-100 pb-100" id="contact">
         <div class="main">
             <div class="section-title text-center">
                 <h4>contact us</h4>
@@ -222,7 +222,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script src="assets/js/jquery.nav.js"></script>
+
     <script>
+        $(document).ready(function(){
+            $('#nav').onePageNav({
+                currentClass: 'active'
+            })
+        })
         $(window).on('scroll', function(){
             if($(this).scrollTop() > 20){
                 $('.header-area').addClass('sticky');
