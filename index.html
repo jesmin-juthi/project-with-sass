@@ -220,6 +220,18 @@
         <p>&copy; All rights reserved.</p>
     </footer><!-- /.footer-area -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(window).on('scroll', function(){
+            if($(this).scrollTop() > 20){
+                $('.header-area').addClass('sticky');
+            } else{
+                $('.header-area').removeClass('sticky');
+            }
+        });
+    </script>
+
 
 </body>
 </html>

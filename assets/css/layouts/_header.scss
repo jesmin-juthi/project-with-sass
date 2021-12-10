@@ -1,5 +1,17 @@
 .header-area{
     padding: 20px 0;
+    transition: .3s;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    &.sticky{
+        background-color: $white;
+        border-bottom: 2px solid #f2f2f2;
+        a{
+            color: #333 !important;
+        }
+    }
     .logo{
         float: left;
         width: 230px;
@@ -7,6 +19,7 @@
             text-transform: uppercase;
             font-weight: 700;
             font-size: 22px;
+            color: $white;
         }
     }
     .menu{
@@ -22,6 +35,7 @@
                     margin-left: 20px;
                     font-size: 18px;
                     font-weight: 500;
+                    color: $white;
                     &:hover{
                         color: $primary;
                     }
